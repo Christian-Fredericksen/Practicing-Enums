@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public enum EnemyState
+    {
+        Patrolling,
+        Attacking,
+        Chasing,
+        Death
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
