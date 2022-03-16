@@ -17,13 +17,13 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentState = EnemyState.Patrolling; 
+        //currentState = EnemyState.Patrolling; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        switch(currentState)
+        switch (currentState)
         {
             case EnemyState.Patrolling:
                 Debug.Log("Patrolling");
@@ -38,5 +38,11 @@ public class EnemyAI : MonoBehaviour
                 Debug.Log("Death");
                 break;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            currentState = EnemyState.Attacking;
+        }
+
     }
 }
