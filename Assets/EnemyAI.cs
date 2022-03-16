@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //currentState = EnemyState.Patrolling; 
+        currentState = EnemyState.Patrolling; 
     }
 
     // Update is called once per frame
@@ -27,6 +27,10 @@ public class EnemyAI : MonoBehaviour
         {
             case EnemyState.Patrolling:
                 Debug.Log("Patrolling");
+                if (Time.time > 5)
+                {
+                    currentState = EnemyState.Chasing;
+                }
                 break;
             case EnemyState.Attacking:
                 Debug.Log("Attacking");
