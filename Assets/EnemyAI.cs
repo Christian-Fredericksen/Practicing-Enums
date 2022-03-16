@@ -12,11 +12,12 @@ public class EnemyAI : MonoBehaviour
         Death
     }
 
+    public EnemyState currentState;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentState = EnemyState.Patrolling; 
     }
 
     // Update is called once per frame
