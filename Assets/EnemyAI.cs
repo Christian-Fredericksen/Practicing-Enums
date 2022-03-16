@@ -23,6 +23,20 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        switch(currentState)
+        {
+            case EnemyState.Patrolling:
+                Debug.Log("Patrolling");
+                break;
+            case EnemyState.Attacking:
+                Debug.Log("Attacking");
+                break;
+            case EnemyState.Chasing:
+                Debug.Log("Chasing");
+                break;
+            case EnemyState.Death:
+                Debug.Log("Death");
+                break;
+        }
     }
 }
